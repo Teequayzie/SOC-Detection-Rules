@@ -1,5 +1,5 @@
 Mitre Att&ck:
-Tactics:
+Tactics: Remote Code Execution, Privilege Escalation
 Techniques:
 Rule[
 process_name:spoolsv.exe
