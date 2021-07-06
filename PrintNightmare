@@ -2,8 +2,10 @@ Mitre Att&ck:
 Tactics:
 Techniques:
 Rule[
-path:c:/windows/system32/spool/drivers/x64/3/*dll 
-OR
-regmod:hklm\system\currentcontrolset\control\print\environments\windows\ x64\drivers\version-3\*\*dll
+process_name:spoolsv.exe
+AND
+(modload:kernelbase.dll AND modload:unidrv.dll)
+AND
+(path:c:/windows/system32/spool/drivers/x64/3/*dll OR regmod:hklm\system\currentcontrolset\control\print\environments\windows\ x64\drivers\version-3\*\*dll)
 ]
 Assessment: To detect #CVE-2021-1675  #PrintNightmare  execution look for kernelbase.dll, unidrv.dll plus any other dll written into subfolders of C:\Windows\System32\spool\drivers\ directory or registry in the same timeframe by spoolsv.exe
