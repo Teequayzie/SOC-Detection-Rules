@@ -1,3 +1,3 @@
 # SOC-Detection-Rules
 
-Sharing knowledge regarding global Cyber Security, Threat Defence and incident detections rules
+Sharing knowledge regarding Cyber Security, Threat Defence and incident detection.
